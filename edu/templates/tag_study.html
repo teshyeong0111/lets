@@ -19,6 +19,13 @@
         </strong>
         국민 가수
         <a href="{% url 'edu:new_content'%}">새글등록</a>
+        <ul>
+            {% for feed in feed_list %}
+                <li>
+                    {{feed.content}}
+                    <img src="/media/{{feed.photo}}" width="100px"/>
+                </li>
+            {% endfor %}
     </p>
 </div>
     <p>
